@@ -1,0 +1,557 @@
+/* ---------------------------------------------------
+   GLOBAL THEME (MATCHING STUDENT PAGE)
+--------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #5A54FF;
+  --primary-hover: #716CFF;
+  --bg-dark: #0F1629;
+  --bg-card: #111D33;
+  --bg-light: #152543;
+  --bg-soft: #0D1324;
+  --text: #FFFFFF;
+  --muted: #9BA3AF;
+  --border: #1F2C45;
+  --success: #1e824c;
+  --danger: #e63939;
+  --warning: #d2a300;
+  --radius: 12px;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------------------------------------------------
+   LAYOUT (SAME AS STUDENT PAGE)
+--------------------------------------------------- */
+
+.layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  flex: 1;
+  padding: 25px 40px;
+  max-width: 1440px;
+  margin: 0 auto;   /* CENTER EVERYTHING */
+}
+
+/* ---------------------------------------------------
+   TOPBAR (MATCHED EXACTLY TO STUDENT TOPBAR)
+--------------------------------------------------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.topbar h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-search {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  width: 280px;
+  color: var(--text);
+}
+
+.profile-circle {
+  width: 42px;
+  height: 42px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------
+   SECTION HEADINGS
+--------------------------------------------------- */
+.section-heading {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* ---------------------------------------------------
+   ACTIVE REQUESTS GRID (MATCH STUDENT WRITER GRID)
+--------------------------------------------------- */
+.request-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 15px;
+}
+
+.request-card {
+  background: var(--bg-card);
+  padding: 22px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: 0.25s ease;
+  min-height: 210px;
+}
+
+.request-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* -------- STATUS COLORS -------- */
+.status-pill {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-requested { background: #3b3f5a; color: #fff; }
+.status-confirmed { background: #345bff; color: #fff; }
+.status-in-progress { background: var(--primary); color: #fff; }
+.status-completed { background: var(--success); color: #fff; }
+.status-submitted { background: var(--warning); color: #000; }
+
+/* REQUEST INFO */
+.details-block {
+  margin-top: 10px;
+}
+
+.details-block p {
+  color: var(--muted);
+  margin: 4px 0;
+}
+
+.details-block span {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* BUTTONS (STUDENT STYLE) */
+.btn-primary {
+  display: block;
+  background: var(--primary);
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-neg {
+  background: #303a58;
+  color: #b2c0ff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn-reject {
+  background: #e63939;
+  color: white;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn-view {
+  background: var(--bg-light);
+  border: none;
+  padding: 10px;
+  border-radius: var(--radius);
+  margin-top: 10px;
+  color: var(--text);
+  width: 100%;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------
+   HISTORY TABLE (MATCHED TO STUDENT)
+--------------------------------------------------- */
+.history-section h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 35px;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.history-table th {
+  background: var(--bg-light);
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.history-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.history-view-btn {
+  background: var(--bg-light);
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* ---------------------------------------------------
+   NEGOTIATION MODAL
+--------------------------------------------------- */
+
+.neg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9000;
+}
+
+.neg-modal {
+  background: var(--bg-soft);
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid var(--border);
+}
+
+.neg-title {
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.neg-input,
+.neg-textarea {
+  width: 100%;
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.neg-textarea {
+  min-height: 90px;
+}
+
+.neg-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.neg-btn-primary {
+  background: var(--primary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  color: white;
+  cursor: pointer;
+}
+
+.neg-btn-secondary {
+  background: var(--bg-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------
+   PREMIUM DETAILS MODAL (MATCH STUDENT EXACT)
+--------------------------------------------------- */
+.details-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 10, 22, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+}
+
+.details-modal {
+  width: 92%;
+  max-width: 850px;
+  background: #111528;
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(135, 140, 255, 0.15);
+  color: #fff;
+  animation: popIn 0.3s ease;
+}
+
+/* Header */
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 22px;
+}
+
+.details-title-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+}
+
+.details-close {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #aaa;
+}
+.details-close:hover { color: #fff; }
+
+/* Topic Title */
+.details-topic {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Status Pill */
+.details-status-pill {
+  background: rgba(255, 198, 93, 0.15);
+  border: 1px solid rgba(255,198,93,0.35);
+  color: #ffc65d;
+  padding: 6px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Info row */
+.details-info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.details-info-box label {
+  color: #8c93a7;
+  font-size: 13px;
+}
+
+.details-info-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+/* Uploaded docs */
+.details-doc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.details-doc-item {
+  background: #1a1f35;
+  padding: 14px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-doc-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.details-doc-download {
+  color: #7e8cff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.details-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+/* Negotiation history */
+.details-neg-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.details-neg-item {
+  background: #1a1f35;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  gap: 12px;
+}
+
+.details-neg-item i {
+  color: #ffc65d;
+}
+
+/* Chat section */
+.details-chat-box {
+  margin-top: 25px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 18px;
+}
+
+.details-chat-messages {
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 14px;
+}
+
+.chat-bubble.me {
+  background: var(--primary);
+  align-self: flex-end;
+}
+
+.chat-bubble.them {
+  background: #222843;
+  align-self: flex-start;
+}
+
+.chat-time {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* Chat input */
+.details-chat-input-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.details-chat-input-row input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #2d3550;
+  background: #1a1f35;
+  color: white;
+}
+
+.details-send-btn {
+  background: var(--primary);
+  border: none;
+  border-radius: 12px;
+  width: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.details-send-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* Modal Animation */
+@keyframes popIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.writer-rating-small {
+  background: #222;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: gold;
+  font-weight: 700;
+  margin-left: 10px;
+  border: 1px solid #333;
+}

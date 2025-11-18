@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import Navbar from "./components/Navbar";
 
-function App() {
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import StudentDashboard from "./pages/StudentDashboard";
+import WriterDashboard from "./pages/WriterDashboard";
+import WriterProfile from "./pages/WriterProfile";
+import WriterProfileSetup from "./pages/WriterProfileSetup";
+
+import "./App.css";
+function AppContent() {
+  const location = useLocation();
+
+  const hideNavbarRoutes = [
+    "/login",
+    "/register",
+    "/writer/profile-setup",
+    "/"
+  ];
+
+  const hideNavbar = hideNavbarRoutes.includes(location.pathname);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {!hideNavbar && <Navbar />}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/student/dashboard" element={<StudentDashboard />} />
+        <Route path="/writer/dashboard" element={<WriterDashboard />} />
+        <Route path="/writer/:id" element={<WriterProfile />} />
+        <Route path="/writer/profile-setup" element={<WriterProfileSetup />} />
+      </Routes>
+    </>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <AuthProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </AuthProvider>
+  );
+}

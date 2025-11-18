@@ -1,0 +1,118 @@
+/* BACKGROUND */
+.writer-setup-container {
+  width: 100%;
+  height: 100vh;
+  background: #0d0d21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* CARD */
+.writer-setup-card {
+  width: 450px;
+  background: #121228;
+  padding: 40px 35px;
+  border-radius: 16px;
+  box-shadow: 0 0 35px rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+/* LOGO */
+.writer-setup-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.writer-setup-logo i {
+  font-size: 28px;
+  color: #6b5cff;
+}
+
+.writer-setup-logo span {
+  font-weight: 700;
+}
+
+/* TITLES */
+.writer-setup-title {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.writer-setup-sub {
+  color: #c3c3d1;
+  margin-bottom: 25px;
+}
+
+/* FORM */
+.writer-setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.writer-setup-form label {
+  text-align: left;
+  color: #cfcfea;
+  font-size: 14px;
+}
+
+/* INPUTS */
+.writer-setup-form input,
+.writer-setup-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: #1a1a33;
+  border: 1px solid #262640;
+  border-radius: 10px;
+  color: #e9e9f9;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.writer-setup-form input:focus,
+.writer-setup-form textarea:focus {
+  border-color: #6b5cff;
+}
+
+/* TEXTAREA HEIGHT */
+.writer-setup-form textarea {
+  min-height: 90px;
+  resize: none;
+}
+
+/* BUTTON */
+.writer-setup-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  background: #6b5cff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.writer-setup-btn:hover {
+  background: #5a4afc;
+}
+
+/* MESSAGE */
+.writer-setup-msg {
+  margin-top: 15px;
+  color: #6b5cff;
+  font-size: 14px;
+  font-weight: 500;
+}

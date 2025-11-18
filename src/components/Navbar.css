@@ -1,0 +1,153 @@
+/* ============================
+   NAVBAR BASE
+============================ */
+.nav {
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  border-bottom: 1px solid #e9eef5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Container for the logo */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+/* ============================
+   LOGO (LEFT SIDE)
+============================ */
+/* LEFT LOGO */
+.logo {
+  display: flex;               /* Controls layout */
+  align-items: center;
+  gap: 12px;                   /* Perfect spacing between icon + text */
+  text-decoration: none;
+  white-space: nowrap;         /* Prevents wrapping */
+}
+
+/* Logo Icon */
+
+
+/* Logo Text */
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1b1f3a;
+  line-height: 1;              /* Prevents vertical misalignment */
+}
+
+
+/* ============================
+   RIGHT SIDE ICONS + BUTTONS
+============================ */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-auth-btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: #246bfd;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-auth-btn:hover {
+  background: #1d56d1;
+}
+
+.nav-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background: #f4f7fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+  transition: 0.2s;
+}
+
+.nav-icon-btn:hover {
+  background: #e8edf7;
+}
+
+/* ============================
+   PROFILE DROPDOWN
+============================ *//* Dropdown Container */
+.profile-dropdown {
+  position: relative;
+}
+
+/* Profile icon */
+.profile-circle {
+  width: 42px;
+  height: 42px;
+  background: #e8d0b0;
+  border-radius: 12px;
+  color: #3b3b3b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* DROPDOWN (click only, no hover) */
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 180px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+}
+
+/* Name at top */
+.dropdown-name {
+  font-weight: 600;
+  padding: 8px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #444;
+}
+
+/* Dropdown links */
+.dropdown-item {
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #444;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.dropdown-item:hover {
+  background: #f4f7fe;
+}
+
+.logout {
+  color: red;
+  font-weight: 600;
+}

@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #007bff;
+  --primary-hover: #0a84ff;
+  --background: #0d1117;
+  --card-bg: #161b22;
+  --border: #1f2630;
+  --text: #e6edf3;
+  --muted: #9ba3af;
+  --danger: #ff4c4c;
+  --success: #28a745;
+}
+
+.requests-page {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top left, #0b1622 0%, #0d1117 90%);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 60px 8%;
+}
+
+.requests-page h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.requests-page p {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.status-msg {
+  text-align: center;
+  background: rgba(0, 123, 255, 0.1);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: inline-block;
+  animation: fadeIn 0.5s ease;
+}
+
+/* ---------- REQUEST GRID ---------- */
+.requests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.request-card {
+  background: rgba(22, 27, 34, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 0 18px rgba(0, 123, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.request-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.15);
+}
+
+.request-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.request-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 6px 0;
+}
+
+.request-card strong {
+  color: var(--text);
+}
+
+.request-card button {
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.request-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+}
+
+/* ---------- NEGOTIATION SECTION ---------- */
+.negotiation-box {
+  margin-top: 15px;
+  background: #0e131a;
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.negotiation-box p {
+  color: var(--text);
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.negotiation-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.negotiation-actions button {
+  flex: 1;
+  margin: 0 4px;
+}
+
+.negotiation-actions button:first-child {
+  background: var(--success);
+}
+
+.negotiation-actions button:last-child {
+  background: var(--danger);
+}
+
+/* ---------- MEETING CONFIRM ---------- */
+.meeting-confirm {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meeting-confirm input {
+  background: #0e1117;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 10px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.meeting-confirm input:focus {
+  border-color: var(--primary);
+}
+
+/* ---------- MODAL ---------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 15, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal {
+  background: #161b22;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 30px rgba(0, 123, 255, 0.15);
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  color: var(--text);
+}
+
+.modal h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  background: #0e1117;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.modal input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.modal-actions button {
+  flex: 1;
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: #fff;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.modal-actions button:last-child {
+  background: #252a33;
+  border: 1px solid var(--border);
+}
+
+.modal-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  .requests-page {
+    padding: 40px 5%;
+  }
+
+  .request-card {
+    padding: 20px;
+  }
+
+  .modal {
+    padding: 25px;
+  }
+}
