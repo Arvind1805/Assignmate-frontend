@@ -529,3 +529,37 @@
   color: #6b5cff;
   font-weight: 600;
 }
+
+/* Hide left side on mobile */
+@media (max-width: 768px) {
+  .login-left {
+    display: none !important;
+  }
+
+  .login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .login-right {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .login-right-content {
+    width: 100%;
+  }
+  .login-wrapper {
+  display: flex;
+}
+
+.login-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+}
