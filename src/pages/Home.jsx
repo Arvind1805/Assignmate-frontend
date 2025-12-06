@@ -12,7 +12,7 @@ export default function Home() {
           <div className="hero-left">
             <h1>
               Smarter Assignments,  
-              <span> Powered by AI.</span>
+              <span> With AssignMate.</span>
             </h1>
 
             <p>
