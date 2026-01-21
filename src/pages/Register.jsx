@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { UserPlus, Mail, Lock, GraduationCap } from "lucide-react";
+// import { UserPlus, Mail, Lock, GraduationCap } from "lucide-react";
 import API from "../api/axios";
 import { useAuth } from "../context/AuthContext";
 import "./Auth.css";
